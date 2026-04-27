@@ -98,6 +98,21 @@ LGBM_LEAVES     = 63
 
 ---
 
+## 📂 Dataset
+
+**New DR Dataset** — Paired Fundus + OCT retinal images with DR stage labels.
+
+[![Kaggle Dataset](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?logo=kaggle)](https://www.kaggle.com/datasets/danielwill004/new-dr-dataset)
+
+| Split | Images | Labels |
+|-------|--------|--------|
+| Fundus | Per patient + eye | `0` (No DR) · `NPDR` · `PDR` |
+| OCT | Paired with Fundus | Same 3-class labels |
+
+Pairs matched via `PatientID_Eye` key extracted from filenames (e.g. `1333_OI_f_2.jpg` → key `1333_OI`). Only samples with matching, valid labels in **both** modalities are used.
+
+---
+
 ## 🛠️ Tech Stack
 
 | Category | Tools |
